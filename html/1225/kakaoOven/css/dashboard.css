@@ -93,6 +93,10 @@ header {
 .page-header {
     display: flex;
     justify-content: space-between;
+
+    margin: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 9px;
 }
 /* before가 있어서 효과가 중첩 */
 
@@ -161,7 +165,7 @@ header {
 
 
 .change-viewtype {
-    /* border: 1px solid #ccc;  << 버튼2개의 테두리 */
+    /* border: 1px solid #ccc;  << 버튼2개의 테두리, 36을 다 맞추자 */
     background-color: #fff;
     color: #333;
 
@@ -184,5 +188,208 @@ header {
 
 .change-viewtype:not([type=active]):hover {
     background-color: #e6e6e6;
+    /* 뭐가 없는 타입인가? = not의 hover 이다 */
 }
-/* 뭐가 없는 타입인가? = not의 hover 이다 */
+
+.row {
+    display: flex;
+}
+
+.nav-stacked {
+    margin: 0;
+    padding: 0px 15px 0px 0px;
+    width: 277.5px;
+/* 나의 프로젝트 라인 블럭 설정 */
+    list-style-type: none;
+}
+
+.nav-stacked-list {
+    margin-bottom: 2px;
+    border-radius: 2px;
+    /* nav stacked - 나의 프로젝트 라인 */
+    padding: 10px 15px;
+    width: 262.5px;
+    height: 40px;
+
+    cursor: pointer;
+}
+
+.nav-stacked-list:not([class *=active-list]):hover {
+    /* class안에 act-list가 있으면? backG#eee가 없는것에만 적용 */
+    background-color: #eee;
+    
+}
+
+.active-list {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.project-main {
+    /* 설정했을 때 모두선택, 새로운프로젝트 간격 생성 */
+    padding-left: 15px;
+    width: 862.5px;
+}
+
+.project-action {
+    /* 모두선택, 새로운 프로젝트 라인 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    /* 모두,새로운 버튼 설정 묶음 */
+    border: 1px solid #adadad;
+    border-radius: 2px;
+    padding: 6px 12px;
+    height: 34px;
+
+    cursor: pointer;
+}
+
+
+/* 모든 버튼에 hover 속성이 있다 */
+
+.btn-default {
+    background-color: white;
+}
+.btn-default:hover {
+    background-color: #eee;
+}
+ 
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #357ebd;
+}
+/* 프로젝트 썸네일 라인 */
+.project-list-wrapper {
+    /* 프로젝트 썸네일들의 정렬 */
+    display: flex;
+
+    /* 썸네일이 공간에 따라 정렬이 아래로 내려가게끔 */
+    flex-wrap: wrap;
+
+    padding: 15px 0px;
+}
+.project-item {
+    /* padding때문에 따로 구분해둠 */
+    padding: 0px 15px;
+}
+.project-container {
+    /* 프로젝트 썸네일 공간 테두리 */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    width: 252.5px;
+    /* 컨테이너 너비 */
+}
+.item-header {
+    /* 톱니바퀴 우측위로 이동 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+    /* 체크박스,톱니바퀴 아래 여백 패딩! */
+}
+.item-option-btn {
+    /* 톱니아이콘 색상 및 위치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+
+    border-radius: 2px;
+    width: 35px;
+    height: 22px;
+
+    cursor: pointer;
+}
+.item-option-btn:hover {
+    /* 톱니 호버효과 */
+    border: 1px solid #ddd;
+    background-color: #e6e6e6;
+}
+
+/* 톱니 아이콘의 폰트사이즈는 상속되지 않아서 위는 안됨, 따로 설정해줘야됨 */
+.item-option-btn .fa-solid {
+    font-size: 11px;
+    margin: 0px 1px;    
+}
+
+.item-img-container {
+    /* flex를 주면 이미지를 담을 수 있다, 왼쪽에 맞춰 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 썸네일 안쪽 이미지들어갈 공간 */
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 242.5px;
+    height: 162px;
+    
+    /* 틀을 넘어가는 부분은 숨긴다 */
+    overflow: hidden;
+    /* 이미지를 클릭할 수 있게 */
+    cursor: pointer;
+}
+
+.item-img-container img {
+    /* 알아서 채워준다 만약 벗어나면 위에 오버플로우! */
+    width: 100%;
+    /* 100%는 부모요소의(컨텐츠) 영역 */
+}
+
+.item-content {
+    /* 위 이미지 아래의 영역 */
+    padding: 9px;
+}
+.item-title {
+    /* 컨텐츠영역의 폰트(a태그)영역과 사이즈 */
+    margin: 6px 0px 10px;
+
+    font-size: 24px;
+    color: #3498db;
+}
+
+.item-description {
+    /* a태그 아래의 텍스트(test) 및 라인 영역*/
+    /* 마진은 중첩이라 신경안써도 됨 */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    height: 48px;
+
+    font-size: 12px;
+}
+
+.project-time {
+    margin-bottom: 5px;
+    /* 날짜 영역 */
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-time .fa-clock {
+/* 상속되지않은 시계모양 사이즈 변경을 위해 따로 지정 */
+    font-size: 12px;
+}
+
+.btn-test {
+    /* 로그인없이 테스트 버튼설정 */
+    padding: 1.8px 5.4px 2.7px;
+
+    /* 녹색영역 사이즈 설정 */
+    height: auto;
+    line-height: 10px;
+
+    background-color: #5cb85c;
+    color: white;
+    font-size: 10px;
+}
+
+/* 패딩(안쪽), 마진(밖)의 기준은 항상 보더가 된다 */

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -38,13 +42,238 @@
                     <input type="text" class="form-control" placeholder="프로젝트 검색">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="btn-toggle">
-                    <button class="btn change-viewtype">
+                <div class="toggle">
+                    <button class="change-viewtype">
                         <i class="fa-solid fa-list-ul"></i>
                     </button>
-                    <button class="btn change-viewtype active">
+                    <button class="change-viewtype active">
+                        <!-- active가 있는 곳에 i 태그 효과부여 -->
                         <i class="fa-solid fa-table-cells-large"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="nav-stacked">
+                <li class="nav-stacked-list active-list">나의 프로젝트</li>
+                <!-- active 상태일 때 색이 변한다 -->
+                <li class="nav-stacked-list">나에게 공유된 프로젝트</li>
+            </ul>
+            <div class="project-main">
+                <!-- 프로젝트 썸네일 큰틀 -->
+
+                <div class="project-action">
+                    <!-- 여기 모두선택, 새로운프로젝트 만들기 버튼생성 -->
+                    <button class="btn btn-default">모두 선택</button>
+                    <button class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> 새로운 프로젝트 만들기</button>
+                    <!-- 버튼-부트스트랩 참고, 다양한 형태를 볼 수 있다 -->
+                </div>
+                <div class="project-list-wrapper">
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 한세트 시작 -->
+                    <div class="project-item">
+                        <div class="project-container">
+                            <div class="item-header">
+                                <!-- 여기아래 flex로 정렬해줘야 함 -->
+                                <input type="checkbox" class="item-check">
+                                <div class="item-option-btn">
+                                    <!-- 톱니바퀴 부분 설정 -->
+                                    <i class="fa-solid fa-gear"></i>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="item-img-container">
+                                <!-- 썸네일 이미지 박스 -->
+                                <img src="/images/3.png">
+                            </div>
+                            <!-- 이미지박스, 텍스트 한묶음으로 되어있음 -->
+                            <div class="item-content">
+                                <!-- 이미지 아래 컨텐츠 영역, 패딩을써서 안으로 잡아둔다 -->
+                                <!-- #은 자기자신 주소를 뜻함 -->
+                                <a href="#" class="item-title">Test</a>
+                                <pre class="item-description">test</pre>
+                                <!-- pre는 div내에선 안되는 줄바꿈이 여기선 먹는다 -->
+                                <div class="item-footer">
+                                    <div class="project-time"><i class="fa-regular fa-clock"></i> 2022-12-27</div>
+                                    <button class="btn btn-test"> 로그인 없이 테스트 가능</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 세트의 끝 -->
                 </div>
             </div>
         </div>
@@ -53,4 +282,5 @@
 
     </footer>
 </body>
+
 </html>
