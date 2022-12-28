@@ -11,6 +11,12 @@ a {
     text-decoration: none;
 }
 
+/* 마진- 태그와 태그사이의 간격, */
+/* 보더- 보이지않는 영역이지만 선으로 표현을 해줌 */
+/* 패딩- 보더와 컨텐츠 사이의 간격 */
+/* width, height - 마진을 포함한 영역, 다음 컨텐츠는 마진이 끝나는 지점에서 붙어서 이어진다(중첩) */
+
+
 .container {
     margin: 0px auto;
     padding: 0px 15px;
