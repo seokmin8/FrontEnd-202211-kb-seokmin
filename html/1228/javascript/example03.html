@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 3</title>
+    <script src="js/common.js"></script>
+    <script>
+        // 여기에서 정의된 함수에서 사용될 script 들은 여기서 끝을 내준다
+        //funtion 1 
+        function func1() {
+            alert('func1 - 안녕하세요.');
+        }
+        // func1();
+
+        //funtion 2
+        // let(거의 사용안함), const
+        const func2 = () => {
+            // 인자를 받고 콜백 후 다시 인자를 받는 형태도 가능
+            alert('func2 - 안녕하세요.');
+        }
+        // func2();
+        // 원래는 ()없이 사용 가능하다?
+
+        
+    </script>
+</head>
+<body>
+    <button id="btn1">Btn 1</button>
+    <input style="width: 100px;">
+
+    <button onclick="helloworld();">Hello World!</button>
+
+    <button onclick="moveExample02();">Move 02</button>
+    <a href="./example02.html">move 02</a>
+
+    <script>
+        // const onclickHandler = document.querySelector('#btn1')
+        // onclickHandler.onclick = func2;
+        document.querySelector('#btn1').onclick = func2;
+        //.querySelector()는 CSS 선택자로 요소를 선택
+        // 주의할 점은 선택자에 해당하는 첫번째 요소만 선택한다는 것
+        // document.querySelector( '.xyz' ) 는 클래스 값이 xyz인 첫번째 요소에 접근
+    </script>
+    <!-- <input style="width: 100px;" onfocus="alert('Focusing');"/> -->
+    <!-- 처음부터 포커스가 가있기 때문에 알림이 뜨지 않다가 손대는순간 계속 뜨게됨 -->
+</body>
+</html>

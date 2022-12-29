@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript 2</title>
+    <script src="js/common.js"></script>
 </head>
 
 <body>
+    <button onclick="back();">back</button>
     <script>
         // --자료형--
         // number, string, boolean
@@ -27,7 +29,9 @@
         console.log(arr);
         console.log(typeof(arr));
 
-        // 따로 타입없이 객체를 만들어서 값을 준다 ( k : v ,)
+        // 따로 데이터 타입없이 객체를 만들어서 값을 준다 ( k : v ,)
+        // 스크립트 언어(번역없이 그냥 한줄씩 읽어내려감) 이기 때문에 타입이 없음!
+        // 컴파일 언어(0,1 - binary)와 차이는 에러를 미리볼 수 없다
         var obj = {
             'name': '홍길동',
             'age': 20
